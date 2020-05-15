@@ -33,3 +33,4 @@ int alu_process(struct ALU *alu);
 // Helpers
 char alu_overflow(struct ALU *alu);
 void alu_set_line(struct ALU *alu, char ab, char *line);
+void alu_get_line(struct ALU *alu, char *line);

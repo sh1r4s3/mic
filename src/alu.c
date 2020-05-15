@@ -95,3 +95,15 @@ void alu_set_line(struct ALU *alu, char ab, char *line)
     }
   }
 }
+
+void alu_get_line(struct ALU *alu, char *line)
+{
+  // Basic sanity check
+  if (!alu || !alu->unit || !line)
+    return;
+
+  for (int i = 0; i < alu->n_units; ++i)
+  {
+    line[i] = alu->unit[i].output;
+  }
+}
