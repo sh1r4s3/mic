@@ -78,6 +78,10 @@ char alu_overflow(struct ALU *alu)
 
 void alu_set_line(struct ALU *alu, char ab, char *line)
 {
+  // Basic sanity check
+  if (!alu || !alu->unit || !line)
+    return;
+
   for (int i = 0; i < alu->n_units; ++i)
   {
     switch (ab)
