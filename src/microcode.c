@@ -10,6 +10,7 @@ struct microcode *microcode_create(int n_cmds)
     ERR("Can't allocate memory for %d commands in microcode", n_cmds);
   
   mcode->n_cmds = n_cmds;
+  return mcode;
 }
 
 void microcode_free(struct microcode *mcode)
