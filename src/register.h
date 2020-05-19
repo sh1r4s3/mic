@@ -4,9 +4,9 @@
 
 struct reg
 {
-  char *data;
-  const char *name;
-  int bits;
+    char *data;
+    const char *name;
+    int bits;
 };
 
 struct reg *reg_create(int bits, const char *name);

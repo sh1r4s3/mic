@@ -3,27 +3,27 @@
 #include "misc.h"
 
 /*
-  This structures describes a state of a simple ALU module.
-  docs/ALU.md describes the circuit.
-*/
+ * This structures describes a state of a simple ALU module.
+ * docs/ALU.md describes the circuit.
+ */
 
 struct ALU_unit {
-  // Input lines
-  char a, b;
-  // Output lines
-  char output;
-  char carry_out;
+    // Input lines
+    char a, b;
+    // Output lines
+    char output;
+    char carry_out;
 };
 
 struct ALU {
-  // Input parallel lines
-  char inva;
-  char ena, enb;
-  char f0, f1;
-  char inc;
-  // ALU units description
-  struct ALU_unit *unit;
-  unsigned short n_units;
+    // Input parallel lines
+    char inva;
+    char ena, enb;
+    char f0, f1;
+    char inc;
+    // ALU units description
+    struct ALU_unit *unit;
+    unsigned short n_units;
 };
 
 struct ALU *alu_create(unsigned short units);

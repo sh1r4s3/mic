@@ -10,8 +10,8 @@
 
 struct microcode
 {
-  struct mir *cmd;
-  int n_cmds;
+    struct mir *cmd;
+    int n_cmds;
 };
 
 struct microcode *microcode_create(int n_cmds);

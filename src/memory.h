@@ -4,10 +4,10 @@
 
 struct memory
 {
-  char in; // rd, wr, fetch
-  int addr;
-  int size;
-  int8_t *data;
+    char in; // rd, wr, fetch
+    int addr;
+    int size;
+    int8_t *data;
 };
 
 enum memory_instruction {rd = 0, wr = 1, fetch = 2};
